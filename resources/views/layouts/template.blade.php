@@ -63,7 +63,7 @@
                             alt="User Image">
                     </div>
                     <div class="info">
-                        <a href="#" class="d-block">Arifin Risyad</a>
+                        <a href="#" class="d-block">Arifin</a>
                     </div>
                 </div>
 
@@ -86,7 +86,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href=".."
+                            <a href="{{ route('kategori.index')}}"
                                 class="nav-link {{ ($title==='Kategori') ? 'active':'' }}">
                                 <i class="nav-icon fas fa-th-large"></i>
                                 <p>

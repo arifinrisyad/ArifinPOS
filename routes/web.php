@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\customercontroller;
 use App\Http\Controllers\productcontroller;
+use App\Http\Controllers\UserController;
 use App\Models\Customer;
 
 /*
@@ -33,6 +34,8 @@ Route::resource('kategori',CategoryController::class)
 Route::resource('pelanggan',customercontroller::class)->except('destroy');
 
 Route::resource('produk',ProductController::class);
+
+Route::resource('pengguna',UserController::class)->except('destroy','create','show','update','edit');
 
 
 

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\CetakController;
 use App\Http\Controllers\customercontroller;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\productcontroller;
@@ -43,3 +44,17 @@ Route::get('login',[LoginController::class,'loginView'])->name('login');
 Route::post('login',[LoginController::class,'authenticate']); 
 
 Route::post('logout',[LoginController::class,'logout'])->middleware('auth');
+
+Route::get('penjualan',function(){
+    return view('penjualan.index',[
+        "title" => "penjualan"
+    ]);
+})->middleware('auth');
+
+Route::get('order',function(){
+    return view('penjualan.orders',[
+        "title" => "Order"
+    ]);
+})->middleware('auth');
+
+Route::get('cetakReceipt',[CetakController::class,'receipt'])->name('cetakReceipt')->middleware('auth');

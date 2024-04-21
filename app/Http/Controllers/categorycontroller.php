@@ -45,7 +45,7 @@ public function edit(Category $kategori): View
         $kategori->update($request->all());
         return redirect()->route('kategori.index')->with('updated','Kategori Berhasil Diubah.');
     }
-
+  
 
 
 }

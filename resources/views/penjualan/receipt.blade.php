@@ -52,10 +52,10 @@ body{
 <script>
     $(document).ready(function(){
         window.print();
-        setInterval(myURL,5000);
+        setInterval(myURL,5000000000);
     });
     function myURL() {
-        document.location.href = "{{ route('penjualan') }}";
+        document.location.href = "{{ route('cetakReceipt') }}";
         // clearInterval(interval);
     }
    

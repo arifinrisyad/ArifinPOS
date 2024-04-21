@@ -25,7 +25,7 @@ class Penjualan extends Component
 
         Order::create([
            'invoice' => $this->invoice(),
-           'customer' => $this->customer_id,
+           'customer_id' => $this->customer_id,
            'user_id' => Auth::user()->id,
            'total' => '0'
         ]);

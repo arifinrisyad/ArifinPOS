@@ -50,6 +50,7 @@ class customercontroller extends Controller
             "phone" => "required",
             "address" => "nullable"
         ]);
+        
 
         $pelanggan->update($request->all());
         return redirect()->route('pelanggan.index')
